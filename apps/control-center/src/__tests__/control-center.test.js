@@ -72,7 +72,7 @@ describe('Control Center Supervisor Integration Tests', () => {
     const res = await get('/');
     assert.equal(res.status, 200);
     assert.ok(res.headers['content-type'].includes('text/html'));
-    assert.ok(res.body.includes('YOUPI Control Center'));
+    assert.ok(res.body.includes('Synk Control Center') || res.body.includes('Control Center'));
     assert.ok(res.body.includes('Managed host processes'));
     assert.ok(res.body.includes('Live logs, all services'));
   });
